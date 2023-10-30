@@ -33,7 +33,7 @@ int main(void)
 
 	current = head;
 	for (i = 0; i < 4; i++)
-        current = current->next;
+		current = current->next;
 	temp = current->next;
 	current->next = head;
 
@@ -44,7 +44,7 @@ int main(void)
 
 	current = head;
 	for (i = 0; i < 4; i++)
-        current = current->next;
+		current = current->next;
 	current->next = temp;
 
 	free_listint(head);
