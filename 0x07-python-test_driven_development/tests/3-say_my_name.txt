@@ -1,0 +1,48 @@
+How to use 2-say_my_name.py module
+
+it prints 2 names given as args
+
+Usage
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("sasa", "lasa")
+    My name is sasa lasa
+
+::
+
+    >>> say_my_name("Tom Jerry", "Avril")
+    My name is Tom Jerry Avril
+
+
+::
+
+    >>> say_my_name("Sasa")
+    My name is Sasa 
+
+Invalid Names
+
+::
+
+    >>> say_my_name(6, "James")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("MeCalister", ["Cavs", "Bakers", "Heat"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"LeBron": 6, "Lames": 23}, 7.7)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
