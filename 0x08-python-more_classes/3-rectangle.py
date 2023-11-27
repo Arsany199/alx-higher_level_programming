@@ -58,16 +58,10 @@ class Rectangle:
         """return a rectangle with # character"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-
-        rec = []
+        rec = ""
         for i in range(self.__height):
-            [rec.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rec.append("\n")
-        return ("".join(rec))
-
-    def __repr__(self):
-        """return the string of the rectangle"""
-        rec = "Rectangle(" + str(self.__width)
-        rec += ", " + str(self.__height) + ")"
+            for j in range(self.__width):
+                rec += "#"
+            if i < self.__height - 1:
+                rec += "\n"
         return rec
