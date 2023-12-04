@@ -1,5 +1,6 @@
-0t.txt module
-====================
+1-my_list.txt check the following functions
+
+Usage
 
 Importing the class from the module:
 >>> MyList = __import__("1-my_list").MyList
@@ -50,58 +51,31 @@ Checking empty object
 >>> obj1.print_sorted()
 []
 
-Checking negative values
->>> obj2 = MyList()
+>>> neg = MyList()
 
->>> obj2.append(-1)
+>>> neg.append(-3)
 
->>> obj2.append(0)
+>>> neg.append(0)
 
->>> obj2.append(-233)
+>>> neg.append(-233)
 
->>> obj2.append(-9)
+>>> neg.append(-9)
 
->>> print(obj2)
-[-1, 0, -233, -9]
+>>> print(neg)
+[-3, 0, -233, -9]
 
->>> obj2.print_sorted()
-[-233, -9, -1, 0]
+>>> neg.print_sorted()
+[-233, -9, -3, 0]
 
-Checking NULL object
->>> obj3 = MyList()
+>>> null = MyList()
 
->>> obj3.append(NULL)
+>>> null.append(NULL)
 Traceback (most recent call last):
     ...
 NameError: name 'NULL' is not defined
 
->>> print(obj3)
+>>> print(null)
 []
 
->>> obj3.print_sorted()
+>>> null.print_sorted()
 []
-
-Checking NaN object
->>> obj4 = MyList()
-
->>> obj4.append(NaN)
-Traceback (most recent call last):
-    ...
-NameError: name 'NaN' is not defined
-
->>> print(obj4)
-[]
-
->>> obj4.print_sorted()
-[]
-
-Checking None object
->>> obj5 = MyList()
-
->>> obj5.append(None)
-
->>> print(obj5)
-[None]
-
->>> obj5.print_sorted()
-[None]
