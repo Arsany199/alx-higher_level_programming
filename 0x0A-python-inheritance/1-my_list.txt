@@ -1,0 +1,56 @@
+1-my_list.py file
+
+Usage
+
+>>> MyList = __import__("1-my_list").MyList
+
+>>> m = __import__("1-my_list").__doc__
+>>> len(m) > 1
+True
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> empty_obj = MyList()
+>>> print(empty_obj)
+[]
+
+>>> empty_obj.print_sorted()
+[]
+
+>>> neg_obj = MyList()
+>>> neg_obj.append(-2)
+>>> neg_obj.append(-88)
+>>> neg_obj.append(0)
+>>> neg_obj.append(-5)
+>>> print(neg_obj)
+[-2, -88, 0, -5]
+
+>>> neg_obj.print_sorted()
+[-88, -5, -2, 0]
+
+>>> null_obj = MyList()
+>>> null_obj.append(NULL)
+Traceback (most recent call last):
+    ...
+NameError: name 'NULL' is not defined
+
+>>> print(null_obj)
+[]
+
+>>> null_obj.print_sorted()
+[]
+
+
