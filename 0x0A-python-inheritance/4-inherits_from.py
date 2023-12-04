@@ -3,7 +3,7 @@
 
 
 def inherits_from(obj, a_class):
-    """function return true or false if obj is instance 
+    """function return true or false if obj is instance
     of class inherted directly or in directly"""
     if issubclass(type(obj), a_class) and type(obj) != a_class:
         return True
