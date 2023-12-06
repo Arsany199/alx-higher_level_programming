@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Module defines the function print_stats"""
-if __name__ = "__main__":
-    import sys
 
 
 def print_stats(size, status_codes):
@@ -10,6 +8,10 @@ def print_stats(size, status_codes):
     print("File size: {}".format(size))
     for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
+
+
+if __name__ = "__main__":
+    import sys
 
     size = 0
     status_codes = {}
