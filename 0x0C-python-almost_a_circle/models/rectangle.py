@@ -7,6 +7,9 @@ from models.base import Base
 
 class Rectangle(Base):
     """the rectangle class"""
+
+    print_symbol = "#"
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializing the attributes of the rectangle class"""
         super().__init__(id)
@@ -78,3 +81,14 @@ class Rectangle(Base):
     def area(self):
         """return the area of rectangle"""
         return (self.__width * self.__height)
+
+    def display(self):
+        """prints the rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        [print("") for y in range(self.__y)]
+        for h in range(self.__height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
