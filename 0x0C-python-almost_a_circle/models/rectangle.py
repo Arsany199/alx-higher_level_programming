@@ -93,6 +93,21 @@ class Rectangle(Base):
             [print("#", end="") for w in range(self.width)]
             print("")
 
+    def update(self, *args, **kwargs):
+        """assigns arguments to the rectangles attr"""
+        if len(args) == 0:
+            for k, v in kwargs.items():
+                self.__setattr__(k, v)
+            return
+        try:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+        except IndexError:
+            pass
+
     def __str__(self):
         """overwrite the string method"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
