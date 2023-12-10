@@ -108,6 +108,14 @@ class Rectangle(Base):
         except IndexError:
             pass
 
+    def to_dictionary(self):
+        """returns the dictionary representation of the Rectangle class"""
+        return {"x": self.x,
+                "y": self.y,
+                "id": self.id,
+                "height": self.height,
+                "width": self.width}
+
     def __str__(self):
         """overwrite the string method"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
