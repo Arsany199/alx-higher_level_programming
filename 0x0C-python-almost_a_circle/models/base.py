@@ -2,7 +2,6 @@
 """This module is the base module"""
 import json
 import csv
-import turtle
 
 
 class Base:
