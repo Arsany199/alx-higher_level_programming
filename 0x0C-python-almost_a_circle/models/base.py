@@ -60,7 +60,7 @@ class Base:
         try:
             with open(file_name, mode="r", encoding="UTF8") as f:
                 cont = cls.from_json_string(f.read())
-        except:
+        except Exception:
             return []
 
         instances = []
