@@ -1,17 +1,11 @@
 #!/usr/bin/node
-// print the rectangle with X
+// print the rectangle using X
 module.exports = class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0 || w === undefined || h === undefined) {
-      return this;
-    } else {
-      this.width = w;
-      this.height = h;
-    }
+    if (w > 0 && h > 0) { [this.width, this.height] = [w, h]; }
   }
+
   print () {
-    for (let count = 0; count < this.height; count++) {
-      console.log('X'.repeat(this.width));
-    }
+    for (let i = 0; i < this.height; i++) console.log('X'.repeat(this.width));
   }
 };
