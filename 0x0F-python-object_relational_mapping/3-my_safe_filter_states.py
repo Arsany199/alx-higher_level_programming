@@ -11,7 +11,7 @@ if __name__ == '__main__':
                          passwd=argv[2], db=argv[3])
 
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE BINARY name = %s".format[argv[4]])
+    c.execute("SELECT * FROM states WHERE BINARY name = %s", [argv[4]])
 
     rows = c.fetchall()
     for i in rows:
