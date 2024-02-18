@@ -4,7 +4,7 @@
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import sys
+from sys import argv
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
@@ -17,3 +17,4 @@ if __name__ == "__main__":
         if "a" in state.name:
             session.delete(state)
     session.commit()
+    session.close()
