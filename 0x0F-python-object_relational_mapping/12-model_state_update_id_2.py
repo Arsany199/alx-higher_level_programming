@@ -11,7 +11,6 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    Base.metadata.create_all(engine)
 
     new_state = session.query(state).fillter_by(id=2).first()
     new_state.name = "New Mexico"
