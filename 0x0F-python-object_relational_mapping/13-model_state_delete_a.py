@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Script that deletes all State objects with a name containing"""
 
-from model_state import State
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
@@ -13,8 +13,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for st in session.query(State):
-        if "a" in st.name:
-            session.delete(st)
+    for state in session.query(State):
+        if "a" in state.name:
+            session.delete(state)
     session.commit()
-    session.close()
