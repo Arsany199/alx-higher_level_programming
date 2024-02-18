@@ -12,9 +12,9 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)
     session = session()
 
-    f_state = session.query(f_state).order_by(state.id).first()
+    f_state = session.query(state).order_by(state.id).first()
     if f_state:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(f_state.id, f_state.name))
     else:
         print("Nothing")
     session.close()
