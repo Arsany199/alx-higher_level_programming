@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that prints the first State object from the database"""
+"""script that lists all State objects that contain the letter a"""
 from model_state import Base, State
 import sys
 from sqlalchemy import create_engine
