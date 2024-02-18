@@ -16,3 +16,4 @@ if __name__ == "__main__":
     new_state = session.query(state).fillter_by(id=2).first()
     new_state.name = "New Mexico"
     session.commit()
+    session.close()
