@@ -15,8 +15,8 @@ if __name__ == "__main__":
 
     my_state = session.query(state).filter(state.name == argv[4]).first()
 
-    if my_state is False:
-        print("Not found")
-    else:
+    if my_state:
         print("{}".format(my_state.id))
+    else:
+        print("Not found")
     session.close()
