@@ -11,10 +11,9 @@ if __name__ == '__main__':
                          passwd=argv[2], db=argv[3])
 
     c = db.cursor()
-    c.execute("SELECT * FROM cities as c \
-                INNER JOIN states as s \
-                   ON c.state_id = s.id \
-                ORDER BY c.id")
+    c.execute("SELECT cities.id, cities.name FROM cities\
+                INNER JOIN states ON cities.state_id = states.id\
+                WHERE states.name = %s", [argv[4]])
 
     rows = c.fetchall()
     for i in rows:
