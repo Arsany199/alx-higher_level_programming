@@ -1,3 +1,3 @@
 #!/bin/bash
 # DELETE the url request and print the content
-curl -Xs DELETE $1
+curl -sX DELETE $1
