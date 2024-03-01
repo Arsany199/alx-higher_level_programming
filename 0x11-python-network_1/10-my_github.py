@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Sends a search request for a given string"""
+"""get the id of an authenticated github user"""
+
 import requests
 import sys
 
 
 if __name__ == "__main__":
-    url = "https://swapi.co/api/people"
-    param = {"search": sys.argv[1]}
-    res = requests.get(url, param=param).json()
-
-    print("Number of results: {}".format(res.get("count")))
-    [print(r.get("name")) for r in res.get("results")]
+    search = requests.get(
+        "https://api.github.com/user",
+        auth=(sys.argv[1], sys.argv[2])
+        )
+    print(search.json().get("id"))
