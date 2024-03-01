@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""Script that takes in a URL and an email
-sends a POST request and displays the body of the response"""
-from sys import argv
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+"""Sends a POST request to a given URL with a given email"""
+import sys
+import urllib.parse
+import urllib.request
 
 
 if __name__ == "__main__":
