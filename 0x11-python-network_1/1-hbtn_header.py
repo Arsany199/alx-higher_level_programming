@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script displays the X-Request-Id header variable of a request to a given URL"""
+""" script display X-Request-Id header variable of a request to a given URL"""
 import sys
 import urllib.request
 
