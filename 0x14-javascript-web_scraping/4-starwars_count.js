@@ -9,12 +9,11 @@ request(url, (err, data, body) => {
     console.log(err);
   } else {
     const films = JSON.parse(body).results;
-    for (let i = 0; i < body.lenth; i++) {
+    for (let i = 0; i < films.length; i++) {
       const characters = films[i].characters;
-
-      for (let j = 0; j < characters.lenth; j++) {
-        if (characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
-          x = x + 1;
+      for (let j = 0; j < characters.length; j++) {
+        if (characters[j] === 'https://swapi-api.hbtn.io/api/people/18/' || characters[j] === 'http://swapi-api.hbtn.io/api/people/18/') {
+          x += 1;
         }
       }
     }
